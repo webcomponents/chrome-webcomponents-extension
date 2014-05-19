@@ -1,6 +1,11 @@
 'use strict';
 
-chrome.runtime.onConnect.addListener(function(port) {
+var port;
+var toggle = false;
+
+chrome.runtime.onConnect.addListener(function(p) {
+    port = p;
+
     // Listens to messages from content.js
     port.onMessage.addListener(function(msg) {
         // Shows the icon if there's a custom element
@@ -10,9 +15,16 @@ chrome.runtime.onConnect.addListener(function(port) {
             });
         }
     });
+});
 
-    // Sends a message when the icon is clicked
-    chrome.pageAction.onClicked.addListener(function(tab) {
-        port.postMessage({open: true});
-    });
+// Sends a message when the icon is clicked
+chrome.pageAction.onClicked.addListener(function(tab) {
+    if (!toggle) {
+        toggle = true;
+    }
+    else {
+        toggle = false;
+    }
+
+    port.postMessage({open: toggle});
 });

@@ -17,16 +17,29 @@ if (allElements.length > 0) {
     hasElements = true;
 }
 
+// Stores the element's default style
+var originalOutline = [];
+var originalBackground = [];
+
+allElements.forEach(function(element, i) {
+    originalOutline[i] = element.style.outline;
+    originalBackground[i] = element.style.backgroundColor;
+});
+
 // Sends a message to background.js
 port.postMessage({hasElements: hasElements});
 
 // Listens to messages from background.js
 port.onMessage.addListener(function(msg) {
-    // Highlights all custom elements on the page
-    if (msg.open) {
-        allElements.forEach(function(element, i) {
+    // Toggles highlight in all custom elements
+    allElements.forEach(function(element, i) {
+        if (msg.open) {
             element.style.outline = '1px dashed red';
             element.style.backgroundColor = 'rgba(255,0,0,0.1)';
-        });
-    }
+        }
+        else {
+            element.style.outline = originalOutline[i];
+            element.style.backgroundColor = originalBackground[i];
+        }
+    });
 });
