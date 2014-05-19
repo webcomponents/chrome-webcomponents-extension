@@ -1,0 +1,4 @@
+{
+    "globalstrict": true,
+    "predef": ["chrome", "document"]
+}
