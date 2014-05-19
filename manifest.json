@@ -1,0 +1,37 @@
+{
+    "name": "Web Components",
+    "version": "0.1.0",
+    "manifest_version": 2,
+    "description": "Identify all Custom Elements used on a site.",
+    "icons": {
+        "16": "img/logo_16x16.png",
+        "48": "img/logo_48x48.png",
+        "128": "img/logo_128x128.png"
+    },
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ],
+        "persistent": false
+    },
+    "page_action": {
+        "default_icon": {
+            "19": "img/logo_19x19.png",
+            "38": "img/logo_38x38.png"
+        }
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "content_scripts": [{
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+        ],
+        "js": [
+            "js/content.js"
+        ],
+        "run_at": "document_end",
+        "all_frames": false
+    }]
+}
