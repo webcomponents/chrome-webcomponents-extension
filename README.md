@@ -13,6 +13,7 @@
 - [x] Show all Custom Elements used on a site
 - [ ] Detect if a site is using Polymer or X-Tag
 - [ ] Identify other Web Component's functionalities (e.g. Shadow DOM, HTML Imports, etc)
+- [ ] Create a Firefox extension
 
 ## Contributing
 
