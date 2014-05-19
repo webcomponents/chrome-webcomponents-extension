@@ -1,4 +1,4 @@
-# Chrome WebComponents
+# Web Components - Chrome Extension
 
 ![Banner](https://cloud.githubusercontent.com/assets/398893/3009132/cd9cc212-dee8-11e3-8c2b-867857a32cdf.png)
 
@@ -25,7 +25,7 @@
 
 ## Team
 
-This extension was made with love by these guys and a bunch of awesome [contributors](https://github.com/webcomponents/chrome-webcomponents/graphs/contributors).
+This extension was made with love by these guys and a bunch of awesome [contributors](https://github.com/webcomponents/chrome-webcomponents-extension/graphs/contributors).
 
 [![Zeno Rocha](https://2.gravatar.com/avatar/e190023b66e2b8aa73a842b106920c93)](https://github.com/zenorocha) | [![Eric Bidelman](https://2.gravatar.com/avatar/e7948aac7c52b26470be80311873a398)](https://github.com/ebidel)
 --- | --- | --- | --- | ---
@@ -33,7 +33,7 @@ This extension was made with love by these guys and a bunch of awesome [contribu
 
 ## History
 
-For detailed changelog, check [Releases](https://github.com/webcomponents/chrome-webcomponents/releases).
+For detailed changelog, check [Releases](https://github.com/webcomponents/chrome-webcomponents-extension/releases).
 
 ## License
 
