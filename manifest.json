@@ -20,9 +20,6 @@
             "38": "img/logo_38x38.png"
         }
     },
-    "permissions": [
-        "tabs"
-    ],
     "content_scripts": [{
         "matches": [
             "http://*/*",
