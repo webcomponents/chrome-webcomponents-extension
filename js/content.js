@@ -10,12 +10,8 @@ allElements = Array.prototype.slice.call(allElements).filter(function(el) {
     return el.localName.indexOf('-') != -1 || el.getAttribute('is');
 });
 
-// Detects if there's a custom element
-var hasElements = false;
-
-if (allElements.length > 0) {
-    hasElements = true;
-}
+// Detects if there's >=1 custom elements
+var hasElements = !!allElements.length;
 
 // Stores the element's default style
 var originalOutline = [];
