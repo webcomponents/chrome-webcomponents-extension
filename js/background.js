@@ -19,12 +19,6 @@ chrome.runtime.onConnect.addListener(function(p) {
 
 // Sends a message when the icon is clicked
 chrome.pageAction.onClicked.addListener(function(tab) {
-    if (!toggle) {
-        toggle = true;
-    }
-    else {
-        toggle = false;
-    }
-
+    toggle = !toggle;
     port.postMessage({open: toggle});
 });
